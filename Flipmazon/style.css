@@ -1,0 +1,270 @@
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #b0b0b0;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #FFFFFF;
+    --border-color: #333;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.navbar {
+     background-color: var(--card-background);
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.navbar-brand:hover {
+    color: #e0bb00;
+}
+
+.btn-primary {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #e0bb00;
+    --bs-btn-hover-border-color: #d4b100;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #d4b100;
+    --bs-btn-active-border-color: #c8a700;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: var(--primary-color);
+    --bs-btn-hover-border-color: var(--primary-color);
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+.form-control:focus {
+    background-color: #333;
+    border-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+.form-control::placeholder {
+    color: var(--secondary-color);
+}
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.text-muted {
+    color: var(--secondary-color) !important;
+}
+
+.page-section {
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+}
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.search-bar {
+    max-width: 600px;
+    margin: auto;
+}
+.category-card {
+    background-color: var(--card-background);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.1);
+    border-color: var(--primary-color);
+}
+.category-card i {
+    color: var(--primary-color);
+}
+
+.filter-sidebar {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    height: fit-content;
+}
+
+.search-results-content h2, .content-page h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+.search-results-content hr, .content-page hr {
+    border-color: var(--border-color);
+    opacity: 0.5;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-color: var(--primary-color);
+}
+.product-card .card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background-color: #2a2a2a;
+}
+.product-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.product-card .card-text {
+    font-size: 0.85rem;
+    flex-grow: 1;
+}
+.product-card .price-comparison {
+    margin-top: auto;
+    font-size: 0.8rem;
+}
+.product-card .price-comparison .store-logo {
+    font-weight: 600;
+}
+.product-card .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.img-thumbnail {
+    background-color: #2a2a2a;
+    border-color: var(--border-color);
+}
+.list-group-item {
+     background-color: transparent;
+     border-color: var(--border-color);
+     color: var(--text-color);
+}
+.list-group-item-action:hover, .list-group-item-action:focus {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--text-color);
+}
+
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-form {
+    max-width: 450px;
+    width: 100%;
+    background: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.auth-form a {
+    color: var(--primary-color);
+}
+
+.dashboard-nav .nav-link {
+    color: var(--secondary-color);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.25rem;
+}
+.dashboard-nav .nav-link.active,
+.dashboard-nav .nav-link:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+.dashboard-nav .nav-link.text-danger {
+    color: var(--danger-color) !important;
+}
+.dashboard-nav .nav-link.text-danger:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-white {
+    background-color: var(--card-background) !important;
+}
+
+.nav-tabs {
+    border-bottom-color: var(--border-color);
+}
+.nav-tabs .nav-link {
+    color: var(--secondary-color);
+}
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--border-color) var(--border-color) var(--primary-color);
+}
+.nav-tabs .nav-link:hover {
+    border-color: var(--border-color);
+}
+
+.footer {
+    background-color: var(--card-background);
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+.footer .footer-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.footer .footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer .footer-links a:hover {
+    color: var(--text-color);
+}

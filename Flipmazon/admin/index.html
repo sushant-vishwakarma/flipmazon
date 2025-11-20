@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipmazon - Admin Panel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <section id="login-page">
+            <div class="login-box">
+                <h1>Flipmazon</h1>
+                <h2>Admin Panel Login</h2>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="admin@flipmazon.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" value="1136">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Login</button>
+                    
+                    <p id="login-error">Invalid email or password. Please try again.</p>
+                </form>
+            </div>
+        </section>
+
+        <section id="admin-panel">
+            
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h1>Flipmazon</h1>
+                </div>
+                
+                <nav id="sidebar-nav">
+                    <a href="#dashboard" class="nav-link active" data-target="dashboard-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                    
+                    <a href="#add-item" class="nav-link" data-target="add-item-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <span>Add Item</span>
+                    </a>
+                    
+                    <a href="#track-delivery" class="nav-link" data-target="track-delivery-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path d="M9 17.25C10.2426 17.25 11.25 16.2426 11.25 15C11.25 13.7574 10.2426 12.75 9 12.75C7.75736 12.75 6.75 13.7574 6.75 15C6.75 16.2426 7.75736 17.25 9 17.25Z" stroke="currentColor" stroke-width="1.so much25"/>
+                          <path d="M20.25 17.25C21.4926 17.25 22.5 16.2426 22.5 15C22.5 13.7574 21.4926 12.75 20.25 12.75C19.0074 12.75 18 13.7574 18 15C18 16.2426 19.0074 17.25 20.25 17.25Z" stroke="currentColor" stroke-width="1.5"/>
+                          <path d="M1 3.75H4.875C5.46079 3.75 5.925 4.21421 5.925 4.8V12.75H18C18.4142 12.75 18.75 13.0858 18.75 13.5V15.75C18.75 16.1642 18.4142 16.5 18 16.5H11.25M5.925 12.75C5.925 13.7804 5.08043 14.625 4.05 14.625H2.25C1.66421 14.625 1.2 14.1608 1.2 13.575V4.8C1.2 4.21421 1.66421 3.75 2.25 3.75H4.875C5.46079 3.75 5.925 4.21421 5.925 4.8V12.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M11.25 16.5H6.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Track Delivery</span>
+                    </a>
+                    
+                    <a href="#orders" class="nav-link" data-target="orders-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" />
+                        </svg>
+                        <span>Orders</span>
+                    </a>
+                    
+                    <a href="#complaints" class="nav-link" data-target="complaints-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                        </svg>
+                        <span>Complaints</span>
+                    </a>
+                </nav>
+                
+                <button class="logout-btn" id="logout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                    </svg>
+                    <span>Logout</span>
+                </button>
+            </aside>
+            
+            <main class="main-content">
+            
+                <div id="dashboard-content" class="content-section active">
+                    <div class="content-header">
+                        <h2>Dashboard</h2>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card-title">Total Orders</div>
+                            <div class="stat-card-value">1,428</div>
+                            <div class="stat-card-desc">+12.5% vs last month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-title">Total Revenue</div>
+                            <div class="stat-card-value">₹8,56,750</div>
+                            <div class="stat-card-desc">+8.2% vs last month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-title">New Complaints</div>
+                            <div class="stat-card-value">14</div>
+                            <div class="stat-card-desc" style="color: var(--color-error);">-5.1% vs last month</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card-title">New Users</div>
+                            <div class="stat-card-value">212</div>
+                            <div class="stat-card-desc">+21.0% vs last month</div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-header">
+                        <h3>Recent Orders</h3>
+                    </div>
+                    
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#FMA8372</td>
+                                    <td>Sushant V.</td>
+                                    <td>2025-11-11</td>
+                                    <td>₹1,27,990</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8371</td>
+                                    <td>Rohan K.</td>
+                                    <td>2025-11-10</td>
+                                    <td>₹4,599</td>
+                                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8370</td>
+                                    <td>Aisha S.</td>
+                                    <td>2025-11-09</td>
+                                    <td>₹899</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="add-item-content" class="content-section">
+                    <div class="content-header">
+                        <h2>Add New Item</h2>
+                    </div>
+                    
+                    <form id="add-item-form">
+                        <div class="form-card">
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label for="item-name">Item Name</label>
+                                    <input type="text" id="item-name" placeholder="e.g., Apple iPhone 15 Pro">
+                                </div>
+                                <div class="input-group">
+                                    <label for="item-category">Category</label>
+                                    <input type="text" id="item-category" placeholder="e.g., Electronics">
+                                </div>
+                                <div class="input-group form-span-2">
+                                    <label for="item-description">Description</label>
+                                    <textarea id="item-description" placeholder="Enter item description..."></textarea>
+                                </div>
+                                <div class="input-group">
+                                    <label for="item-amazon-url">Amazon URL</label>
+                                    <input type="url" id="item-amazon-url" placeholder="https://www.amazon.in/...">
+                                </div>
+                                 <div class="input-group">
+                                    <label for="item-flipkart-url">Flipkart URL</label>
+                                    <input type="url" id="item-flipkart-url" placeholder="https://www.flipkart.com/...">
+                                </div>
+                                <div class="input-group">
+                                    <label for="item-image-url">Image URL</label>
+                                    <input type="url" id="item-image-url" placeholder="https://...">
+                                </div>
+                                <div class="input-group">
+                                    <label for="item-key-specs">Key Specs (comma separated)</label>
+                                    <input type="text" id="item-key-specs" placeholder="Spec 1, Spec 2, Spec 3">
+                                </div>
+                                
+                                <div class="form-actions form-span-2">
+                                    <button type="button" class="btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn-submit">Add Item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="track-delivery-content" class="content-section">
+                    <div class="content-header">
+                        <h2>Track Delivery</h2>
+                    </div>
+                    
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Item</th>
+                                    <th>Retailer</th>
+                                    <th>Tracking ID</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#FMA8371</td>
+                                    <td>Rohan K.</td>
+                                    <td>boAt Airdopes</td>
+                                    <td>Amazon</td>
+                                    <td>AMZ987654321</td>
+                                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8369</td>
+                                    <td>Vikram P.</td>
+                                    <td>Samsung TV</td>
+                                    <td>Flipkart</td>
+                                    <td>FLIP12345678</td>
+                                    <td><span class="status-badge status-shipped">Out for Delivery</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8368</td>
+                                    <td>Neha G.</td>
+                                    <td>"The Alchemist" Book</td>
+                                    <td>Amazon</td>
+                                    <td>AMZ567890123</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="orders-content" class="content-section">
+                    <div class="content-header">
+                        <h2>All Orders (1,428)</h2>
+                    </div>
+                    
+                     <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Item Count</th>
+                                    <th>Total</th>
+                                    <th>Retailer(s)</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#FMA8372</td>
+                                    <td>Sushant V.</td>
+                                    <td>2025-11-11</td>
+                                    <td>1</td>
+                                    <td>₹1,27,990</td>
+                                    <td>Amazon</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8371</td>
+                                    <td>Rohan K.</td>
+                                    <td>2025-11-10</td>
+                                    <td>2</td>
+                                    <td>₹4,599</td>
+                                    <td>Amazon, Flipkart</td>
+                                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8370</td>
+                                    <td>Aisha S.</td>
+                                    <td>2025-11-09</td>
+                                    <td>1</td>
+                                    <td>₹899</td>
+                                    <td>Flipkart</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8369</td>
+                                    <td>Vikram P.</td>
+                                    <td>2025-11-09</td>
+                                    <td>1</td>
+                                    <td>₹32,990</td>
+                                    <td>Flipkart</td>
+                                    <td><span class="status-badge status-shipped">Out for Delivery</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#FMA8368</td>
+                                    <td>Neha G.</td>
+                                    <td>2025-11-08</td>
+                                    <td>1</td>
+                                    <td>₹249</td>
+                                    <td>Amazon</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="complaints-content" class="content-section">
+                    <div class="content-header">
+                        <h2>Complaints (14 Active)</h2>
+                    </div>
+                    
+                     <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Case ID</th>
+                                    <th>Customer</th>
+                                    <th>Order ID</th>
+                                    <th>Issue</th>
+                                    <th>Date Raised</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#CMPL092</td>
+                                    <td>Sushant V.</td>
+                                    <td>#FMA8372</td>
+                                    <td>Item not received</td>
+                                    <td>2025-11-12</td>
+                                    <td><span class="status-badge status-open">Open</span></td>
+                                    <td><button class="action-btn">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#CMPL091</td>
+                                    <td>Rohan K.</td>
+                                    <td>#FMA8371</td>
+                                    <td>Wrong item delivered</td>
+                                    <td>2025-11-11</td>
+                                    <td><span class="status-badge status-open">Open</span></td>
+                                    <td><button class="action-btn">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#CMPL090</td>
+                                    <td>Ankit R.</td>
+                                    <td>#FMA8365</td>
+                                    <td>Payment failed</td>
+                                    <td>2025-11-08</td>
+                                    <td><span class="status-badge status-resolved">Resolved</span></td>
+                                    <td><button class="action-btn">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </main>
+        </section>
+
+    </div><script src="script.js" defer></script>
+    
+</body>
+</html>

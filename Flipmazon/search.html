@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Flipmazon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Flipmazon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="search.html">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Today's Deals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-4 py-md-5">
+        <section class="page-section">
+            <div class="row">
+                <aside class="col-lg-3">
+                    <div class="filter-sidebar">
+                        <h4 class="mb-3">Filters</h4>
+                        <div class="mb-4">
+                            <h6 class="mb-2">Category</h6>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="categoryFilter" id="catAll" checked><label class="form-check-label" for="catAll">All Categories</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="categoryFilter" id="catElectronics"><label class="form-check-label" for="catElectronics">Electronics</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="categoryFilter" id="catFashion"><label class="form-check-label" for="catFashion">Fashion</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="categoryFilter" id="catAppliances"><label class="form-check-label" for="catAppliances">Appliances</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" name="categoryFilter" id="catBooks"><label class="form-check-label" for="catBooks">Books</label></div>
+                        </div>
+                        <div class="mb-4">
+                            <h6 class="mb-2">Price Range</h6>
+                            <input type="range" class="form-range" min="0" max="200000" step="1000" id="priceRange">
+                            <div class="d-flex justify-content-between"><small>₹0</small><small>₹2,00,000+</small></div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="col-lg-9 mt-4 mt-lg-0 search-results-content">
+                    <section id="electronics">
+                        <h2>Electronics</h2><hr>
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=iPhone+15+Pro" class="card-img-top" alt="iPhone 15 Pro"></a><div class="card-body"><h5 class="card-title">Apple iPhone 15 Pro (256GB)</h5><p class="card-text text-muted">A17 Pro Chip, Pro Camera System</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹1,27,990</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹1,28,499</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Dell+XPS+15" class="card-img-top" alt="Dell XPS 15"></a><div class="card-body"><h5 class="card-title">Dell XPS 15 Laptop</h5><p class="card-text text-muted">Intel Core Ultra 9, RTX 4070 GPU</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹2,25,990</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹2,29,990</p><span class="badge bg-danger">Out of Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Sony+XM6" class="card-img-top" alt="Sony WH-1000XM6"></a><div class="card-body"><h5 class="card-title">Sony WH-1000XM6 Headphones</h5><p class="card-text text-muted">Noise Cancelling Headphones</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹29,990</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹29,490</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Apple+Watch" class="card-img-top" alt="Apple Watch Series 10"></a><div class="card-body"><h5 class="card-title">Apple Watch Series 10</h5><p class="card-text text-muted">New Health Sensors, Brighter Display</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹49,900</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹49,900</p><span class="badge bg-danger">Out of Stock</span></div></div></div></div></div>
+                        </div>
+                    </section>
+                    <section id="fashion">
+                        <h2>Fashion</h2><hr>
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Men's+T-Shirt" class="card-img-top" alt="Men's T-Shirt"></a><div class="card-body"><h5 class="card-title">Men's Cotton T-Shirt</h5><p class="card-text text-muted">Round Neck, Half Sleeve, Pack of 3</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹699</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹749</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Running+Shoes" class="card-img-top" alt="Running Shoes"></a><div class="card-body"><h5 class="card-title">Men's Running Shoes</h5><p class="card-text text-muted">Lightweight, Breathable Mesh</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹1,999</p><span class="badge bg-danger">Out of Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹1,899</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Women's+Kurta" class="card-img-top" alt="Women's Kurta"></a><div class="card-body"><h5 class="card-title">Women's Rayon Kurta</h5><p class="card-text text-muted">Printed, Anarkali Style</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹899</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹849</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                        </div>
+                    </section>
+                    <section id="appliances">
+                        <h2>Appliances</h2><hr>
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Microwave" class="card-img-top" alt="Microwave Oven"></a><div class="card-body"><h5 class="card-title">20L Convection Microwave</h5><p class="card-text text-muted">Solo & Grill, Child Lock</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹8,990</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹9,190</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Washing+Machine" class="card-img-top" alt="Washing Machine"></a><div class="card-body"><h5 class="card-title">7kg Top Load Washing Machine</h5><p class="card-text text-muted">Fully-Automatic, 5 Star</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹14,490</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹14,990</p><span class="badge bg-danger">Out of Stock</span></div></div></div></div></div>
+                        </div>
+                    </section>
+                    <section id="books">
+                        <h2>Books</h2><hr>
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Atomic+Habits" class="card-img-top" alt="Atomic Habits"></a><div class="card-body"><h5 class="card-title">Atomic Habits</h5><p class="card-text text-muted">by James Clear</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹450</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹475</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Ikigai" class="card-img-top" alt="Ikigai"></a><div class="card-body"><h5 class="card-title">Ikigai</h5><p class="card-text text-muted">by Héctor García</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹320</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹340</p><span class="badge bg-danger">Out of Stock</span></div></div></div></div></div>
+                            <div class="col-md-6 col-xl-3 mb-4"><div class="card product-card"><a href="product.html" class="text-decoration-none"><img src="https://placehold.co/300x300/FFD700/121212?text=Sapiens" class="card-img-top" alt="Sapiens"></a><div class="card-body"><h5 class="card-title">Sapiens: A Brief History</h5><p class="card-text text-muted">by Yuval Noah Harari</p><div class="row price-comparison mt-3 g-0"><div class="col-6 border-end pe-2" style="border-color: var(--border-color) !important;"><span class="store-logo">Amazon</span><p class="price mb-0">₹499</p><span class="badge bg-success">In Stock</span></div><div class="col-6 ps-2"><span class="store-logo">Flipkart</span><p class="price mb-0">₹510</p><span class="badge bg-success">In Stock</span></div></div></div></div></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0"><a href="index.html" class="footer-brand">Flipmazon</a><p class="text-muted mt-2">Find the best price, every time.</p></div>
+                <div class="col-md-4 mb-3 mb-md-0"><h5>Quick Links</h5><ul class="list-unstyled footer-links"><li><a href="search.html">Categories</a></li><li><a href="login.html">My Account</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="col-md-4"><h5>Legal</h5><ul class="list-unstyled footer-links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+            </div>
+            <div class="text-center text-muted mt-4 border-top border-secondary pt-3" style="border-color: var(--border-color) !important;">&copy; 2025 Flipmazon. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
